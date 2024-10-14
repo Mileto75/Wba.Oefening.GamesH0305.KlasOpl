@@ -1,0 +1,33 @@
+﻿@model DevelopersDetailViewModel
+
+<h2>Developer details</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">@Model.Name</h3>
+    </div>
+    <div class="panel-body">
+        <dl class="dl-horizontal">
+            <dt>Id</dt>
+            <dd>@Model.Id</dd>
+        </dl>
+        <dl class="dl-horizontal">
+            <dt>Name</dt>
+            <dd>@Model.Name</dd>
+        </dl>
+        <div class="list-group">
+            @foreach (var game in Model.Games)
+            {
+                <a class="list-group-item"
+                   asp-action="showgame"
+                   asp-controller="games"
+                   asp-route-id="@game.Id">@game.Title</a>
+            }
+        </div>
+    </div>
+</div>
+
+<p>
+    <a asp-controller="Developers" asp-action="Index" class="btn btn-primary">&laquo; Show all developers</a>
+</p>
+
