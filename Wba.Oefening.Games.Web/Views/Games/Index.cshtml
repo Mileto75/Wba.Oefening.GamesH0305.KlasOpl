@@ -6,6 +6,7 @@
 <div class="card">
     @foreach (var game in Model.Games)
     {
-        <a class="list-group-item" href="/games/@game.Id">@game.Title</a>
+        <a class="list-group-item" asp-controller="Games" asp-action="ShowGame"
+           asp-route-id="@game.Id">@game.Title</a>
     }
 </div>

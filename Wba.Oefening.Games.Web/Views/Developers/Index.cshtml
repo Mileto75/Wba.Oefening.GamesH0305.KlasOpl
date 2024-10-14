@@ -6,6 +6,7 @@
 <div class="list-group">
     @foreach (var developer in Model.Developers)
     {
-        <a class="list-group-item" href="/developers/@developer.Id">@developer.Name</a>
+        <a class="list-group-item" asp-controller="Developers" asp-action="ShowDeveloper" 
+           asp-route-id="@developer.Id">@developer.Name</a>
     }
 </div>
