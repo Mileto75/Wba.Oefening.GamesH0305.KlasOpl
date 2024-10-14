@@ -4,9 +4,5 @@
 <h2>Games</h2>
 
 <div class="card">
-    @foreach (var game in Model.Games)
-    {
-        <a class="list-group-item" asp-controller="Games" asp-action="ShowGame"
-           asp-route-id="@game.Id">@game.Title</a>
-    }
+    <partial name="_GameListPartial" model="@Model.Games"/>
 </div>

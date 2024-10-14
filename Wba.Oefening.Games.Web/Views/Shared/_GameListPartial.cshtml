@@ -1,0 +1,7 @@
+﻿@model List<GamesDetailViewModel>
+
+@foreach (var game in Model)
+{
+    <a class="list-group-item" asp-controller="Games" asp-action="ShowGame"
+       asp-route-id="@game.Id">@game.Title</a>
+}

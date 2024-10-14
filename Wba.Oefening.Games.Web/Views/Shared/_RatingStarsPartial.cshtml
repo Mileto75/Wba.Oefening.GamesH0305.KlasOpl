@@ -1,0 +1,13 @@
+﻿@model int?
+@{
+    int fullStars = (Model ?? 0);
+    int emptyStars = 5 - fullStars;
+}
+@for (int star = 0; star < fullStars; star++)
+{
+    <span class="fas fa-star" aria-hidden="true"></span>
+}
+@for (int star = 0; star < emptyStars; star++)
+{
+    <span class="far fa-star" aria-hidden="true"></span>
+}
